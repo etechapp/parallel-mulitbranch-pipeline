@@ -17,6 +17,7 @@ pipeline {
                 stage ('sub-job-2') {
                     steps {
                         sh 'pwd'
+                        sh 'ps -ef'
                     }
                 }
             }
