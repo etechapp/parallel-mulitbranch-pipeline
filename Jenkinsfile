@@ -11,6 +11,19 @@ pipeline {
                 stage ('sub-job-1') {
                     steps {
                         sh 'lscpu'
+                        sh 'uptime'
+                    }
+                }
+                stage ('sub-job-2') {
+                    steps {
+                        sh 'pwd'
+                        sh 'ps -ef'
+                    }
+                }
+                stage ('sub-job-3'){
+                    steps{
+                        sh 'free -g'
+                        sh 'bash /var/lib/jenkins/workspace/parallel-pipeline/os-jenkins-check.sh'
                     }
                 }
             }
