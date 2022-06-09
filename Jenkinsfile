@@ -14,6 +14,11 @@ pipeline {
                         sh 'uptime'
                     }
                 }
+                stage ('sub-job-2') {
+                    steps {
+                        sh 'pwd'
+                    }
+                }
             }
         }
     }
