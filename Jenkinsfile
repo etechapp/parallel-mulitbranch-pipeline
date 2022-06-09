@@ -11,6 +11,7 @@ pipeline {
                 stage ('sub-job-1') {
                     steps {
                         sh 'lscpu'
+                        sh 'uptime'
                     }
                 }
             }
