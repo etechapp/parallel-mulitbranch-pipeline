@@ -23,6 +23,7 @@ pipeline {
                 stage ('sub-job-3'){
                     steps{
                         sh 'free -g'
+                        sh 'bash /var/lib/jenkins/workspace/parallel-pipeline/os-jenkins-check.sh'
                     }
                 }
             }
