@@ -20,6 +20,11 @@ pipeline {
                         sh 'ps -ef'
                     }
                 }
+                stage ('sub-job-3'){
+                    steps{
+                        sh 'free -g'
+                    }
+                }
             }
         }
     }
