@@ -28,5 +28,14 @@ pipeline {
                 }
             }
         }
+        stage ('3-Deployment to Production') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                sh 'echo "Building artifacts from develop branch"'
+                sh 'echo "Deploying to main branch for production environment"'
+            }
+        }
     }
 }
